@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Jenkins FAQ1.由于权限设置不对导致Jenkins无法登录在jenkins默认的主目录.jenkins中修改config.xml文件1234这个权限对应“任何用户可以做任何事(没有任何限制)&amp;lt;authorizationStrategy class=&amp;quot;hudson.secur">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Yucapri">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Jenkins FAQ"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Yucapri"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Jenkins FAQ - Yucapri</title>
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives/index.html">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/index.html">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories/index.html">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    About Me
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">Yucapri</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2018/06/07/技术/技术_Jenkins FAQ/">
+                Jenkins FAQ
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2018-06-07</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/技术/">技术</a>
+                </span>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h3 id="Jenkins-FAQ"><a href="#Jenkins-FAQ" class="headerlink" title="Jenkins FAQ"></a>Jenkins FAQ</h3><h3 id="1-由于权限设置不对导致Jenkins无法登录"><a href="#1-由于权限设置不对导致Jenkins无法登录" class="headerlink" title="1.由于权限设置不对导致Jenkins无法登录"></a>1.由于权限设置不对导致Jenkins无法登录</h3><h5 id="在jenkins默认的主目录-jenkins中修改config-xml文件"><a href="#在jenkins默认的主目录-jenkins中修改config-xml文件" class="headerlink" title="在jenkins默认的主目录.jenkins中修改config.xml文件"></a>在jenkins默认的主目录.jenkins中修改config.xml文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">这个权限对应“任何用户可以做任何事(没有任何限制)</span><br><span class="line"></span><br><span class="line">&lt;authorizationStrategy class=&quot;hudson.security.AuthorizationStrategy$Unsecured&quot;&gt;</span><br><span class="line">&lt;/authorizationStrategy&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">这个权限对应“登录用户可以做任何事</span><br><span class="line"></span><br><span class="line">&lt;authorizationStrategy class=&quot;hudson.security.FullControlOnceLoggedInAuthorizationStrategy&quot;&gt;</span><br><span class="line">&lt;/authorizationStrategy&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">这个权限对应 test用户可以是管理员、打标签权限</span><br><span class="line"></span><br><span class="line">&lt;authorizationStrategy class=&quot;hudson.security.GlobalMatrixAuthorizationStrategy&quot;&gt;</span><br><span class="line">  &lt;permission&gt;hudson.model.Hudson.Administer:test&lt;/permission&gt;</span><br><span class="line">  &lt;permission&gt;hudson.scm.SCM.Tag:test&lt;/permission&gt;</span><br><span class="line">&lt;/authorizationStrategy&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="2-关闭以及重启jenkins"><a href="#2-关闭以及重启jenkins" class="headerlink" title="2.关闭以及重启jenkins"></a>2.关闭以及重启jenkins</h3><h5 id="gt-关闭"><a href="#gt-关闭" class="headerlink" title="&gt; 关闭"></a>&gt; 关闭</h5><h5 id="点击“系统管理”-gt-“准备关机”。"><a href="#点击“系统管理”-gt-“准备关机”。" class="headerlink" title="点击“系统管理” -&gt;　“准备关机”。"></a>点击“系统管理” -&gt;　“准备关机”。</h5><h5 id="“准备关机”的说明：-停止执行新的构建任务以安全关闭计算机。"><a href="#“准备关机”的说明：-停止执行新的构建任务以安全关闭计算机。" class="headerlink" title="“准备关机”的说明：　停止执行新的构建任务以安全关闭计算机。"></a>“准备关机”的说明：　停止执行新的构建任务以安全关闭计算机。</h5><h5 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h5><h5 id="采用-Jenkins-CLI的方式来关闭Jenkins-参考笔记：-Jenkins-三：-Jenkins-CLI"><a href="#采用-Jenkins-CLI的方式来关闭Jenkins-参考笔记：-Jenkins-三：-Jenkins-CLI" class="headerlink" title="采用 Jenkins CLI的方式来关闭Jenkins 参考笔记： Jenkins 三： Jenkins CLI"></a>采用 Jenkins CLI的方式来关闭Jenkins <a href="http://www.cnblogs.com/miniren/p/5207654.html" target="_blank" rel="noopener">参考笔记： Jenkins 三： Jenkins CLI</a></h5><h5 id="命令是：java-jar-jenkins-cli-jar-s-http-localhost-8080-shutdown"><a href="#命令是：java-jar-jenkins-cli-jar-s-http-localhost-8080-shutdown" class="headerlink" title="命令是：java -jar jenkins-cli.jar -s http://localhost:8080/ shutdown"></a>命令是：<code>java -jar jenkins-cli.jar -s http://localhost:8080/ shutdown</code></h5><h5 id="gt-重启"><a href="#gt-重启" class="headerlink" title="&gt; 重启"></a>&gt; 重启</h5><h5 id="采用-Jenkins-CLI的方式来重启Jenkins-参考笔记：-Jenkins-三：-Jenkins-CLI"><a href="#采用-Jenkins-CLI的方式来重启Jenkins-参考笔记：-Jenkins-三：-Jenkins-CLI" class="headerlink" title="采用 Jenkins CLI的方式来重启Jenkins 参考笔记： Jenkins 三： Jenkins CLI"></a>采用 Jenkins CLI的方式来重启Jenkins <a href="http://www.cnblogs.com/miniren/p/5207654.html" target="_blank" rel="noopener">参考笔记： Jenkins 三： Jenkins CLI</a></h5><h5 id="命令是：java-jar-jenkins-cli-jar-s-http-localhost-8080-restart"><a href="#命令是：java-jar-jenkins-cli-jar-s-http-localhost-8080-restart" class="headerlink" title="命令是：java -jar jenkins-cli.jar -s http://localhost:8080/ restart"></a>命令是：<code>java -jar jenkins-cli.jar -s http://localhost:8080/ restart</code></h5><h5 id="摘自"><a href="#摘自" class="headerlink" title="摘自"></a><a href="https://www.cnblogs.com/miniren/p/5212242.html" target="_blank" rel="noopener">摘自</a></h5><hr>
+<h3 id="3-自动触发构建（通过-Generic-Webhook-Trigger）"><a href="#3-自动触发构建（通过-Generic-Webhook-Trigger）" class="headerlink" title="3.自动触发构建（通过 Generic Webhook Trigger）"></a>3.自动触发构建（通过 <code>Generic Webhook Trigger</code>）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://username:token@host:port/generic-webhook-trigger/invoke?token=`配置中开启“触发远程构建”，设置的token`</span><br></pre></td></tr></table></figure>
+<h5 id="后面可以拼接自定义参数-amp-param-param"><a href="#后面可以拼接自定义参数-amp-param-param" class="headerlink" title="后面可以拼接自定义参数 &amp;param=param"></a>后面可以拼接自定义参数 <code>&amp;param=param</code></h5>
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/Jenkins/">#Jenkins</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    Powered  By <a href="https://hexo.io/"> Hexo</a> &nbsp; & &nbsp; <a href="http://www.codeblocq.com/assets/projects/hexo-theme-alpha-dust/">JonaThan Klughertz - Alpha-dust</a> <br /> Hosted by <a href="https://pages.github.com/">Github Pages</a>
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/12/07/2019/RoadtoDoctor20191207/">考研之路20191207</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/25/2019/RoadtoDoctor20191125/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/21/2019/RoadtoDoctor20191121/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/03/12/2019/RoadtoDoctor20190312/">考研之路20190312</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/2018/">2018</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/React-Native/">React Native</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/node/">node</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/2019/">2019</a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/203monitor">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:cto@yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="http://yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @<a href="http://yucapri.net/">Yucapri</a>. All right reserved
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

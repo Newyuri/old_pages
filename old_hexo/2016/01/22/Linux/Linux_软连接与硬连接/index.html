@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="软连接与硬连接1. 使用方式 ：ln [option] source_file dist_file-f 建立时，将同档案名删除;-i 删除前进行询问;ln -s abc cde 建立abc 的软连接;ln abc cde 建立abc的硬连接.2. 软链接与硬链接的区别（通俗）：硬链接可认为是一个文件">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Yucapri">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="软连接与硬连接"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Yucapri"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>软连接与硬连接 - Yucapri</title>
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives/index.html">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/index.html">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories/index.html">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    About Me
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">Yucapri</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/01/22/Linux/Linux_软连接与硬连接/">
+                软连接与硬连接
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016-01-22</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/Linux/">Linux</a>
+                </span>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="软连接与硬连接"><a href="#软连接与硬连接" class="headerlink" title="软连接与硬连接"></a>软连接与硬连接</h1><h3 id="1-使用方式-：ln-option-source-file-dist-file"><a href="#1-使用方式-：ln-option-source-file-dist-file" class="headerlink" title="1. 使用方式 ：ln [option] source_file dist_file"></a>1. 使用方式 ：ln [option] source_file dist_file</h3><h4 id="f-建立时，将同档案名删除"><a href="#f-建立时，将同档案名删除" class="headerlink" title="-f 建立时，将同档案名删除;"></a>-f 建立时，将同档案名删除;</h4><h4 id="i-删除前进行询问"><a href="#i-删除前进行询问" class="headerlink" title="-i 删除前进行询问;"></a>-i 删除前进行询问;</h4><h4 id="ln-s-abc-cde-建立abc-的软连接"><a href="#ln-s-abc-cde-建立abc-的软连接" class="headerlink" title="ln -s abc cde 建立abc 的软连接;"></a>ln -s abc cde 建立abc 的软连接;</h4><h4 id="ln-abc-cde-建立abc的硬连接"><a href="#ln-abc-cde-建立abc的硬连接" class="headerlink" title="ln abc cde 建立abc的硬连接."></a>ln abc cde 建立abc的硬连接.</h4><h3 id="2-软链接与硬链接的区别（通俗）："><a href="#2-软链接与硬链接的区别（通俗）：" class="headerlink" title="2. 软链接与硬链接的区别（通俗）："></a>2. 软链接与硬链接的区别（通俗）：</h3><h4 id="硬链接可认为是一个文件拥有两个文件名-而软链接则是"><a href="#硬链接可认为是一个文件拥有两个文件名-而软链接则是" class="headerlink" title="硬链接可认为是一个文件拥有两个文件名;而软链接则是"></a>硬链接可认为是一个文件拥有两个文件名;而软链接则是</h4><h4 id="系统新建一个链接文件，此文件指向其所要指的文件"><a href="#系统新建一个链接文件，此文件指向其所要指的文件" class="headerlink" title="系统新建一个链接文件，此文件指向其所要指的文件"></a>系统新建一个链接文件，此文件指向其所要指的文件</h4><h3 id="3-软链接与硬链接的区别（讲解）："><a href="#3-软链接与硬链接的区别（讲解）：" class="headerlink" title="3. 软链接与硬链接的区别（讲解）："></a>3. 软链接与硬链接的区别（讲解）：</h3><h3 id="Linux-软连接与硬连接"><a href="#Linux-软连接与硬连接" class="headerlink" title="Linux 软连接与硬连接"></a>Linux 软连接与硬连接</h3><h4 id="对于一个文件来说，有唯一的索引接点与之对应，而对于一个索引接点号，却可以有多个文件名与之对应。因此，在磁盘上的同一个文件可以通过不同的路径去访问该文件。注意在Linux下是一切皆文件的啊，文件夹、新加的硬盘-…都可以看着文件来处理的啊。"><a href="#对于一个文件来说，有唯一的索引接点与之对应，而对于一个索引接点号，却可以有多个文件名与之对应。因此，在磁盘上的同一个文件可以通过不同的路径去访问该文件。注意在Linux下是一切皆文件的啊，文件夹、新加的硬盘-…都可以看着文件来处理的啊。" class="headerlink" title="对于一个文件来说，有唯一的索引接点与之对应，而对于一个索引接点号，却可以有多个文件名与之对应。因此，在磁盘上的同一个文件可以通过不同的路径去访问该文件。注意在Linux下是一切皆文件的啊，文件夹、新加的硬盘 …都可以看着文件来处理的啊。"></a>对于一个文件来说，有唯一的索引接点与之对应，而对于一个索引接点号，却可以有多个文件名与之对应。因此，在磁盘上的同一个文件可以通过不同的路径去访问该文件。注意在Linux下是一切皆文件的啊，文件夹、新加的硬盘 …都可以看着文件来处理的啊。</h4><h4 id="连接有软连接和硬连接-hard-link-之分的，软连接-symbolic-link-又叫符号连接。符号连接相当于Windows下的快捷方式。"><a href="#连接有软连接和硬连接-hard-link-之分的，软连接-symbolic-link-又叫符号连接。符号连接相当于Windows下的快捷方式。" class="headerlink" title="连接有软连接和硬连接(hard link)之分的，软连接(symbolic link)又叫符号连接。符号连接相当于Windows下的快捷方式。"></a>连接有软连接和硬连接(hard link)之分的，软连接(symbolic link)又叫符号连接。符号连接相当于Windows下的快捷方式。</h4><h4 id="不可以对文件夹建立硬连接的，我们通常用的还是软连接比较多。"><a href="#不可以对文件夹建立硬连接的，我们通常用的还是软连接比较多。" class="headerlink" title="不可以对文件夹建立硬连接的，我们通常用的还是软连接比较多。"></a>不可以对文件夹建立硬连接的，我们通常用的还是软连接比较多。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">ln -s source dist        # 建立软连接</span><br><span class="line">ln source dist            # 建立硬连接</span><br></pre></td></tr></table></figure>
+<h3 id="软链接实际上只是一段文字，里面包含着它所指向的文件的名字，系统看到软链接后自动跳到对应的文件位置处进行处理；相反，硬联接为文件开设一个新的目录-项，硬链接与文件原有的名字是平权的，在Linux看来它们是等价的。由于这个原因，硬链接不能连接两个不同文件系统上的文件。"><a href="#软链接实际上只是一段文字，里面包含着它所指向的文件的名字，系统看到软链接后自动跳到对应的文件位置处进行处理；相反，硬联接为文件开设一个新的目录-项，硬链接与文件原有的名字是平权的，在Linux看来它们是等价的。由于这个原因，硬链接不能连接两个不同文件系统上的文件。" class="headerlink" title="软链接实际上只是一段文字，里面包含着它所指向的文件的名字，系统看到软链接后自动跳到对应的文件位置处进行处理；相反，硬联接为文件开设一个新的目录 项，硬链接与文件原有的名字是平权的，在Linux看来它们是等价的。由于这个原因，硬链接不能连接两个不同文件系统上的文件。"></a>软链接实际上只是一段文字，里面包含着它所指向的文件的名字，系统看到软链接后自动跳到对应的文件位置处进行处理；相反，硬联接为文件开设一个新的目录 项，硬链接与文件原有的名字是平权的，在Linux看来它们是等价的。由于这个原因，硬链接不能连接两个不同文件系统上的文件。</h3><h4 id="软连接可以-跨文件系统-，硬连接不可以-。实践的方法就是用共享文件把windows下的-aa-txt文本文档连接到linux下-root目录-下-bb-cc-ln-s-aa-txt-root-bb-连接成功-。ln-aa-txt-root-bb-失败。"><a href="#软连接可以-跨文件系统-，硬连接不可以-。实践的方法就是用共享文件把windows下的-aa-txt文本文档连接到linux下-root目录-下-bb-cc-ln-s-aa-txt-root-bb-连接成功-。ln-aa-txt-root-bb-失败。" class="headerlink" title="软连接可以 跨文件系统 ，硬连接不可以 。实践的方法就是用共享文件把windows下的 aa.txt文本文档连接到linux下/root目录 下 bb,cc . ln -s aa.txt /root/bb 连接成功 。ln aa.txt /root/bb 失败。"></a>软连接可以 跨文件系统 ，硬连接不可以 。实践的方法就是用共享文件把windows下的 aa.txt文本文档连接到linux下/root目录 下 bb,cc . ln -s aa.txt /root/bb 连接成功 。ln aa.txt /root/bb 失败。</h4><h4 id="关于-I节点的问题-。硬连接不管有多少个，都指向的是同一个I节点，会把-结点连接数增加，只要结点的连接数不是-0，文件就一直存在，不管你删除的是源文件还是-连接的文件-。只要有一个存在-，文件就-存在-（其实也不分什么源文件连接文件的-，因为他们指向都是同一个-I节点）。-当你修改源文件或者连接文件任何一个的时候-，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针-而是使用文件路径名作为指针。所以-删除连接文件-对源文件无影响，但是删除源文件，连接文件就会找不到要指向的文件-。软链接有自己的inode-并在磁盘上有一小片空间存放路径名"><a href="#关于-I节点的问题-。硬连接不管有多少个，都指向的是同一个I节点，会把-结点连接数增加，只要结点的连接数不是-0，文件就一直存在，不管你删除的是源文件还是-连接的文件-。只要有一个存在-，文件就-存在-（其实也不分什么源文件连接文件的-，因为他们指向都是同一个-I节点）。-当你修改源文件或者连接文件任何一个的时候-，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针-而是使用文件路径名作为指针。所以-删除连接文件-对源文件无影响，但是删除源文件，连接文件就会找不到要指向的文件-。软链接有自己的inode-并在磁盘上有一小片空间存放路径名" class="headerlink" title="关于 I节点的问题 。硬连接不管有多少个，都指向的是同一个I节点，会把 结点连接数增加，只要结点的连接数不是 0，文件就一直存在，不管你删除的是源文件还是 连接的文件 。只要有一个存在 ，文件就 存在 （其实也不分什么源文件连接文件的 ，因为他们指向都是同一个 I节点）。 当你修改源文件或者连接文件任何一个的时候 ，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针,而是使用文件路径名作为指针。所以 删除连接文件 对源文件无影响，但是删除源文件，连接文件就会找不到要指向的文件 。软链接有自己的inode,并在磁盘上有一小片空间存放路径名."></a>关于 I节点的问题 。硬连接不管有多少个，都指向的是同一个I节点，会把 结点连接数增加，只要结点的连接数不是 0，文件就一直存在，不管你删除的是源文件还是 连接的文件 。只要有一个存在 ，文件就 存在 （其实也不分什么源文件连接文件的 ，因为他们指向都是同一个 I节点）。 当你修改源文件或者连接文件任何一个的时候 ，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针,而是使用文件路径名作为指针。所以 删除连接文件 对源文件无影响，但是删除源文件，连接文件就会找不到要指向的文件 。软链接有自己的inode,并在磁盘上有一小片空间存放路径名.</h4><h4 id="软连接可以对一个不存在的文件名进行连接-。"><a href="#软连接可以对一个不存在的文件名进行连接-。" class="headerlink" title="软连接可以对一个不存在的文件名进行连接 。"></a>软连接可以对一个不存在的文件名进行连接 。</h4><h4 id="软连接可以对目录进行连接。"><a href="#软连接可以对目录进行连接。" class="headerlink" title="软连接可以对目录进行连接。"></a>软连接可以对目录进行连接。</h4><blockquote>
+<p>备 注：</p>
+</blockquote>
+<blockquote>
+<p>I节点 :它是UNIX内部用于描述文件特性的数据结构.我们通常称I节点为文件索引结点(信息结点).</p>
+</blockquote>
+<blockquote>
+<p>i节点含有关于文件的大部分的重要信息,包括文件数据块在 磁盘上的地址.每一个I节点有它自己的标志号,我们称为文件顺序号.</p>
+</blockquote>
+<blockquote>
+<p>I节点包含的信息 1.文件类型 2.文件属主关系 3.文件的访问权限 4.文件的时间截.<br>最后 删除符号链接，有创建就有删除</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf symbolic_name 注意不是rm -rf symbolic_name/</span><br></pre></td></tr></table></figure>
+<p><a href="http://blog.csdn.net/russle/article/details/4482784" target="_blank" rel="noopener">原文链接</a></p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/命令行/">#命令行</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    Powered  By <a href="https://hexo.io/"> Hexo</a> &nbsp; & &nbsp; <a href="http://www.codeblocq.com/assets/projects/hexo-theme-alpha-dust/">JonaThan Klughertz - Alpha-dust</a> <br /> Hosted by <a href="https://pages.github.com/">Github Pages</a>
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/12/07/2019/RoadtoDoctor20191207/">考研之路20191207</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/25/2019/RoadtoDoctor20191125/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/21/2019/RoadtoDoctor20191121/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/03/12/2019/RoadtoDoctor20190312/">考研之路20190312</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/2018/">2018</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/React-Native/">React Native</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/node/">node</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/2019/">2019</a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/203monitor">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:cto@yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="http://yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @<a href="http://yucapri.net/">Yucapri</a>. All right reserved
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

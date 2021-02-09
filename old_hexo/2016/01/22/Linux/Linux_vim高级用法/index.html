@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="vim高级用法在VIM中进行文本替换：1. 替换当前行中的内容：1234:s/from/to/ （s即substitude）:s/from/to/ ： 将当前行中的第一个from，替换成to。如果当前行含有多个from，则只会替换其中的第一个。:s/from/to/g ： 将当前行中的所有from都">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Yucapri">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="vim高级用法"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Yucapri"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>vim高级用法 - Yucapri</title>
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives/index.html">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/index.html">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories/index.html">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    About Me
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">Yucapri</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/01/22/Linux/Linux_vim高级用法/">
+                vim高级用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016-01-22</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/Linux/">Linux</a>
+                </span>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="vim高级用法"><a href="#vim高级用法" class="headerlink" title="vim高级用法"></a>vim高级用法</h1><h3 id="在VIM中进行文本替换："><a href="#在VIM中进行文本替换：" class="headerlink" title="在VIM中进行文本替换："></a>在VIM中进行文本替换：</h3><h4 id="1-替换当前行中的内容："><a href="#1-替换当前行中的内容：" class="headerlink" title="1. 替换当前行中的内容："></a>1. 替换当前行中的内容：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:s/from/to/ （s即substitude）</span><br><span class="line">:s/from/to/ ： 将当前行中的第一个from，替换成to。如果当前行含有多个from，则只会替换其中的第一个。</span><br><span class="line">:s/from/to/g ： 将当前行中的所有from都替换成to。</span><br><span class="line">:s/from/to/gc ： 将当前行中的所有from都替换成to，但是每一次替换之前都会询问请求用户确认此操作。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：这里的from和to都可以是任何字符串，其中from还可以是正则表达式。</p>
+</blockquote>
+<h4 id="2-替换某一行的内容："><a href="#2-替换某一行的内容：" class="headerlink" title="2. 替换某一行的内容："></a>2. 替换某一行的内容：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:.s/from/to/g ： 在当前行进行替换操作。</span><br><span class="line">:33s/from/to/g ： 在第33行进行替换操作。</span><br><span class="line">:$s/from/to/g ： 在最后一行进行替换操作。</span><br></pre></td></tr></table></figure>
+<h4 id="3-替换某些行的内容："><a href="#3-替换某些行的内容：" class="headerlink" title="3. 替换某些行的内容："></a>3. 替换某些行的内容：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:10,20s/from/to/g ： 对第10行到第20行的内容进行替换。</span><br><span class="line">:1,$s/from/to/g ： 对第一行到最后一行的内容进行替换（即全部文本）。</span><br><span class="line">:1,.s/from/to/g ： 对第一行到当前行的内容进行替换。</span><br><span class="line">:.,$s/from/to/g ： 对当前行到最后一行的内容进行替换。</span><br><span class="line">:’a,’bs/from/to/g ： 对标记a和b之间的行（含a和b所在的行）进行替换。其中a和b是之前用m命令所做的标记。</span><br></pre></td></tr></table></figure>
+<h4 id="4-替换所有行的内容："><a href="#4-替换所有行的内容：" class="headerlink" title="4. 替换所有行的内容："></a>4. 替换所有行的内容：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/from/to/g ： 对所有行的内容进行替换。</span><br></pre></td></tr></table></figure>
+<h4 id="5-替换命令的完整形式："><a href="#5-替换命令的完整形式：" class="headerlink" title="5. 替换命令的完整形式："></a>5. 替换命令的完整形式：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:[range]s/from/to/[flags]</span><br></pre></td></tr></table></figure>
+<h5 id="5-1-把from指定的字符串替换成to指定的字符串，from可以是正则表达式。"><a href="#5-1-把from指定的字符串替换成to指定的字符串，from可以是正则表达式。" class="headerlink" title="5.1 把from指定的字符串替换成to指定的字符串，from可以是正则表达式。"></a>5.1 把from指定的字符串替换成to指定的字符串，from可以是正则表达式。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s/from/to/</span><br></pre></td></tr></table></figure>
+<h5 id="5-2-range-有以下一些表示方法："><a href="#5-2-range-有以下一些表示方法：" class="headerlink" title="5.2 [range] 有以下一些表示方法："></a>5.2 [range] 有以下一些表示方法：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">不写range ： 默认为光标所在的行。</span><br><span class="line">. ： 光标所在的行。</span><br><span class="line">1 ： 第一行。</span><br><span class="line">$ ： 最后一行。</span><br><span class="line">33 ： 第33行。</span><br><span class="line">‘a ： 标记a所在的行（之前要使用ma做过标记）。</span><br><span class="line">.+1 ： 当前光标所在行的下面一行。</span><br><span class="line">$-1 ： 倒数第二行。（这里说明我们可以对某一行加减某个数值来取得相对的行）。</span><br><span class="line">22,33 ： 第22～33行。</span><br><span class="line">1,$ ： 第1行 到 最后一行。</span><br><span class="line">1,. ： 第1行 到 当前行。</span><br><span class="line">.,$ ： 当前行 到 最后一行。</span><br><span class="line">‘a,’b ： 标记a所在的行 到 标记b所在的行。</span><br><span class="line">% ： 所有行（与 1,$ 等价）。</span><br><span class="line">?chapter? ： 从当前位置向上搜索，找到的第一个chapter所在的行。（其中chapter可以是任何字符串或者正则表达式。</span><br><span class="line">/chapter/ ： 从当前位置向下搜索，找到的第一个chapter所在的行。（其中chapter可以是任何字符串或者正则表达式。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意，上面的所有用于range的表示方法都可以通过 +、- 操作来设置相对偏移量。</p>
+</blockquote>
+<h5 id="5-3-flags-这里可用的flags有："><a href="#5-3-flags-这里可用的flags有：" class="headerlink" title="5.3 [flags] 这里可用的flags有："></a>5.3 [flags] 这里可用的flags有：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">无 ： 只对指定范围内的第一个匹配项进行替换。</span><br><span class="line">g ： 对指定范围内的所有匹配项进行替换。</span><br><span class="line">c ： 在替换前请求用户确认。</span><br><span class="line">e ： 忽略执行过程中的错误。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：上面的所有flags都可以组合起来使用，比如 gc 表示对指定范围内的所有匹配项进行替换，并且在每一次替换之前都会请用户确认。</p>
+</blockquote>
+<p><a href="http://blog.sina.com.cn/s/blog_94a93cff0101b5gv.html" target="_blank" rel="noopener">原文链接</a></p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/vim/">#vim</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    Powered  By <a href="https://hexo.io/"> Hexo</a> &nbsp; & &nbsp; <a href="http://www.codeblocq.com/assets/projects/hexo-theme-alpha-dust/">JonaThan Klughertz - Alpha-dust</a> <br /> Hosted by <a href="https://pages.github.com/">Github Pages</a>
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/12/07/2019/RoadtoDoctor20191207/">考研之路20191207</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/25/2019/RoadtoDoctor20191125/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/21/2019/RoadtoDoctor20191121/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/03/12/2019/RoadtoDoctor20190312/">考研之路20190312</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/2018/">2018</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/React-Native/">React Native</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/node/">node</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/2019/">2019</a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/203monitor">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:cto@yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="http://yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @<a href="http://yucapri.net/">Yucapri</a>. All right reserved
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

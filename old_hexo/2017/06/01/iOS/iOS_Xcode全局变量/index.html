@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Xcode全局变量原文地址
+$(BUILT_PRODUCTS_DIR)build成功后的，最终产品路径－－即build/Debug-iphoneos路径下$(TARGET_NAME)标工程名称$(SRCROOT)工程文件（比如Nuno.xcodeproj）的路径(CURRENT_PROJECT_VE">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Yucapri">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Xcode全局变量"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Yucapri"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Xcode全局变量 - Yucapri</title>
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives/index.html">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/index.html">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories/index.html">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    About Me
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">Yucapri</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/06/01/iOS/iOS_Xcode全局变量/">
+                Xcode全局变量
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017-06-01</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/iOS/">iOS</a>
+                </span>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="Xcode全局变量"><a href="#Xcode全局变量" class="headerlink" title="Xcode全局变量"></a>Xcode全局变量</h1><p><a href="http://www.2cto.com/kf/201302/191830.html" target="_blank" rel="noopener">原文地址</a></p>
+<h3 id="BUILT-PRODUCTS-DIR"><a href="#BUILT-PRODUCTS-DIR" class="headerlink" title="$(BUILT_PRODUCTS_DIR)"></a><code>$(BUILT_PRODUCTS_DIR)</code></h3><h3 id="build成功后的，最终产品路径－－即build-Debug-iphoneos路径下"><a href="#build成功后的，最终产品路径－－即build-Debug-iphoneos路径下" class="headerlink" title="build成功后的，最终产品路径－－即build/Debug-iphoneos路径下"></a>build成功后的，最终产品路径－－即<code>build/Debug-iphoneos</code>路径下</h3><h3 id="TARGET-NAME"><a href="#TARGET-NAME" class="headerlink" title="$(TARGET_NAME)"></a><code>$(TARGET_NAME)</code></h3><h3 id="标工程名称"><a href="#标工程名称" class="headerlink" title="标工程名称"></a>标工程名称</h3><h3 id="SRCROOT"><a href="#SRCROOT" class="headerlink" title="$(SRCROOT)"></a><code>$(SRCROOT)</code></h3><h3 id="工程文件（比如Nuno-xcodeproj）的路径"><a href="#工程文件（比如Nuno-xcodeproj）的路径" class="headerlink" title="工程文件（比如Nuno.xcodeproj）的路径"></a>工程文件（比如Nuno.xcodeproj）的路径</h3><h3 id="CURRENT-PROJECT-VERSION"><a href="#CURRENT-PROJECT-VERSION" class="headerlink" title="(CURRENT_PROJECT_VERSION)"></a><code>(CURRENT_PROJECT_VERSION)</code></h3><h3 id="当前工程版本号"><a href="#当前工程版本号" class="headerlink" title="当前工程版本号"></a>当前工程版本号</h3><h3 id="当编译静态库，设备选模拟器-iPhone-5-0-Simulator-，未设置任何Build-Settings参数时，默认的基础路径："><a href="#当编译静态库，设备选模拟器-iPhone-5-0-Simulator-，未设置任何Build-Settings参数时，默认的基础路径：" class="headerlink" title="当编译静态库，设备选模拟器(iPhone 5.0 Simulator)，未设置任何Build Settings参数时，默认的基础路径："></a>当编译静态库，设备选模拟器(iPhone 5.0 Simulator)，未设置任何Build Settings参数时，默认的基础路径：</h3><h3 id="Users-xxx-Library-Developer-Xcode-DerivedData-xxxWorkspace-caepeadwrerdcrftijaolkkagbjf"><a href="#Users-xxx-Library-Developer-Xcode-DerivedData-xxxWorkspace-caepeadwrerdcrftijaolkkagbjf" class="headerlink" title="/Users/xxx/Library/Developer/Xcode/DerivedData/xxxWorkspace-caepeadwrerdcrftijaolkkagbjf"></a><code>/Users/xxx/Library/Developer/Xcode/DerivedData/xxxWorkspace-caepeadwrerdcrftijaolkkagbjf</code></h3><h3 id="下面用-代替上面一长串东东"><a href="#下面用-代替上面一长串东东" class="headerlink" title="下面用$()代替上面一长串东东"></a>下面用$()代替上面一长串东东</h3><h3 id="SYMROOT-Build-Products"><a href="#SYMROOT-Build-Products" class="headerlink" title="$(SYMROOT) = $()/Build/Products"></a><code>$(SYMROOT) = $()/Build/Products</code></h3><h3 id="BUILD-DIR-Build-Products"><a href="#BUILD-DIR-Build-Products" class="headerlink" title="$(BUILD_DIR) = $()/Build/Products"></a><code>$(BUILD_DIR) = $()/Build/Products</code></h3><h3 id="BUILD-ROOT-Build-Products"><a href="#BUILD-ROOT-Build-Products" class="headerlink" title="$(BUILD_ROOT) = $()/Build/Products"></a><code>$(BUILD_ROOT) = $()/Build/Products</code></h3><h3 id="这三个变量中的-不会随着Build-Settings参数的设置而改变。相反，以下可以通过设置而改变"><a href="#这三个变量中的-不会随着Build-Settings参数的设置而改变。相反，以下可以通过设置而改变" class="headerlink" title="这三个变量中的$()不会随着Build Settings参数的设置而改变。相反，以下可以通过设置而改变"></a>这三个变量中的$()不会随着Build Settings参数的设置而改变。相反，以下可以通过设置而改变</h3><h3 id="CONFIGURATION-BUILD-DIR-Build-Products-Debug-iphonesimulator"><a href="#CONFIGURATION-BUILD-DIR-Build-Products-Debug-iphonesimulator" class="headerlink" title="$(CONFIGURATION_BUILD_DIR) = $()/Build/Products/Debug-iphonesimulator"></a><code>$(CONFIGURATION_BUILD_DIR) = $()/Build/Products/Debug-iphonesimulator</code></h3><h3 id="BUILT-PRODUCTS-DIR-Build-Products-Debug-iphonesimulator"><a href="#BUILT-PRODUCTS-DIR-Build-Products-Debug-iphonesimulator" class="headerlink" title="$(BUILT_PRODUCTS_DIR) = $()/Build/Products/Debug-iphonesimulator"></a><code>$(BUILT_PRODUCTS_DIR) = $()/Build/Products/Debug-iphonesimulator</code></h3><h3 id="CONFIGURATION-TEMP-DIR-Build-Intermediates-UtilLib-build-Debug-iphonesimulator"><a href="#CONFIGURATION-TEMP-DIR-Build-Intermediates-UtilLib-build-Debug-iphonesimulator" class="headerlink" title="$(CONFIGURATION_TEMP_DIR) = $()/Build/Intermediates/UtilLib.build/Debug-iphonesimulator"></a><code>$(CONFIGURATION_TEMP_DIR) = $()/Build/Intermediates/UtilLib.build/Debug-iphonesimulator</code></h3><h3 id="TARGET-BUILD-DIR-Build-Products-Debug-iphonesimulator"><a href="#TARGET-BUILD-DIR-Build-Products-Debug-iphonesimulator" class="headerlink" title="$(TARGET_BUILD_DIR) = $()/Build/Products/Debug-iphonesimulator"></a><code>$(TARGET_BUILD_DIR) = $()/Build/Products/Debug-iphonesimulator</code></h3><h3 id="SDK-NAME-iphonesimulator5-0"><a href="#SDK-NAME-iphonesimulator5-0" class="headerlink" title="$(SDK_NAME) = iphonesimulator5.0"></a><code>$(SDK_NAME) = iphonesimulator5.0</code></h3><h3 id="PLATFORM-NAME-iphonesimulator"><a href="#PLATFORM-NAME-iphonesimulator" class="headerlink" title="$(PLATFORM_NAME) = iphonesimulator"></a><code>$(PLATFORM_NAME) = iphonesimulator</code></h3><h3 id="CONFIGURATION-Debug"><a href="#CONFIGURATION-Debug" class="headerlink" title="$(CONFIGURATION) = Debug"></a><code>$(CONFIGURATION) = Debug</code></h3><h3 id="TARGET-NAME-UtilLib"><a href="#TARGET-NAME-UtilLib" class="headerlink" title="$(TARGET_NAME) = UtilLib"></a><code>$(TARGET_NAME) = UtilLib</code></h3><h3 id="EXECUTABLE-NAME-libUtilLib-a-可执行文件名"><a href="#EXECUTABLE-NAME-libUtilLib-a-可执行文件名" class="headerlink" title="$(EXECUTABLE_NAME) = libUtilLib.a 可执行文件名"></a><code>$(EXECUTABLE_NAME) = libUtilLib.a</code> 可执行文件名</h3><h3 id="IPHONEOS-DEPLOYMENT-TARGET-5-0"><a href="#IPHONEOS-DEPLOYMENT-TARGET-5-0" class="headerlink" title="${IPHONEOS_DEPLOYMENT_TARGET} 5.0"></a><code>${IPHONEOS_DEPLOYMENT_TARGET} 5.0</code></h3><h3 id="ACTION-build"><a href="#ACTION-build" class="headerlink" title="$(ACTION) = build"></a><code>$(ACTION) = build</code></h3><h3 id="CURRENTCONFIG-SIMULATOR-DIR-当前模拟器路径"><a href="#CURRENTCONFIG-SIMULATOR-DIR-当前模拟器路径" class="headerlink" title="$(CURRENTCONFIG_SIMULATOR_DIR) 当前模拟器路径"></a><code>$(CURRENTCONFIG_SIMULATOR_DIR)</code> 当前模拟器路径</h3><h3 id="CURRENTCONFIG-DEVICE-DIR-当前设备路径"><a href="#CURRENTCONFIG-DEVICE-DIR-当前设备路径" class="headerlink" title="$(CURRENTCONFIG_DEVICE_DIR) 当前设备路径"></a><code>$(CURRENTCONFIG_DEVICE_DIR)</code> 当前设备路径</h3><h3 id="BUILD-DIR-CONFIGURATION-EFFECTIVE-PLATFORM-NAME"><a href="#BUILD-DIR-CONFIGURATION-EFFECTIVE-PLATFORM-NAME" class="headerlink" title="$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME ="></a><code>$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME =</code></h3><h3 id="Build-Products-Debug-iphonesimulator"><a href="#Build-Products-Debug-iphonesimulator" class="headerlink" title="$()/Build/Products/Debug-iphonesimulator"></a><code>$()/Build/Products/Debug-iphonesimulator</code></h3><h3 id="PROJECT-TEMP-DIR-CONFIGURATION-EFFECTIVE-PLATFORM-NAME-Build-Intermediates-UtilLib-build-Debug-iphonesimulator"><a href="#PROJECT-TEMP-DIR-CONFIGURATION-EFFECTIVE-PLATFORM-NAME-Build-Intermediates-UtilLib-build-Debug-iphonesimulator" class="headerlink" title="$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) = $()/Build/Intermediates/UtilLib.build/Debug-iphonesimulator"></a><code>$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) = $()/Build/Intermediates/UtilLib.build/Debug-iphonesimulator</code></h3><h3 id="自定义变量"><a href="#自定义变量" class="headerlink" title="自定义变量"></a>自定义变量</h3><h3 id="CONFIGURATION-iphoneos-表示：Debug-iphoneos"><a href="#CONFIGURATION-iphoneos-表示：Debug-iphoneos" class="headerlink" title="${CONFIGURATION}-iphoneos 表示：Debug-iphoneos"></a><code>${CONFIGURATION}-iphoneos</code> 表示：Debug-iphoneos</h3><h3 id="CONFIGURATION-iphonesimulator-表示：Debug-iphonesimulator"><a href="#CONFIGURATION-iphonesimulator-表示：Debug-iphonesimulator" class="headerlink" title="${CONFIGURATION}-iphonesimulator 表示：Debug-iphonesimulator"></a><code>${CONFIGURATION}-iphonesimulator</code> 表示：Debug-iphonesimulator</h3><h3 id="CURRENTCONFIG-DEVICE-DIR-SYMROOT-CONFIGURATION-iphoneos"><a href="#CURRENTCONFIG-DEVICE-DIR-SYMROOT-CONFIGURATION-iphoneos" class="headerlink" title="$(CURRENTCONFIG_DEVICE_DIR) = ${SYMROOT}/${CONFIGURATION}-iphoneos"></a><code>$(CURRENTCONFIG_DEVICE_DIR) = ${SYMROOT}/${CONFIGURATION}-iphoneos</code></h3><h3 id="CURRENTCONFIG-SIMULATOR-DIR-SYMROOT-CONFIGURATION-iphonesimulator"><a href="#CURRENTCONFIG-SIMULATOR-DIR-SYMROOT-CONFIGURATION-iphonesimulator" class="headerlink" title="$(CURRENTCONFIG_SIMULATOR_DIR) = ${SYMROOT}/${CONFIGURATION}-iphonesimulator"></a><code>$(CURRENTCONFIG_SIMULATOR_DIR) = ${SYMROOT}/${CONFIGURATION}-iphonesimulator</code></h3><h3 id="自定义一个设备无关的路径（用来存放各种架构arm6-arm7-i386输出的产品）"><a href="#自定义一个设备无关的路径（用来存放各种架构arm6-arm7-i386输出的产品）" class="headerlink" title="自定义一个设备无关的路径（用来存放各种架构arm6/arm7/i386输出的产品）"></a>自定义一个设备无关的路径（用来存放各种架构arm6/arm7/i386输出的产品）</h3><h3 id="CREATING-UNIVERSAL-DIR-SYMROOT-CONFIGURATION-universal"><a href="#CREATING-UNIVERSAL-DIR-SYMROOT-CONFIGURATION-universal" class="headerlink" title="$(CREATING_UNIVERSAL_DIR) = ${SYMROOT}/${CONFIGURATION}-universal"></a><code>$(CREATING_UNIVERSAL_DIR) = ${SYMROOT}/${CONFIGURATION}-universal</code></h3><h3 id="自定义变量代表的值"><a href="#自定义变量代表的值" class="headerlink" title="自定义变量代表的值"></a>自定义变量代表的值</h3><h3 id="CURRENTCONFIG-DEVICE-DIR-＝-Build-Products-Debug-iphoneos"><a href="#CURRENTCONFIG-DEVICE-DIR-＝-Build-Products-Debug-iphoneos" class="headerlink" title="$(CURRENTCONFIG_DEVICE_DIR) ＝ $()/Build/Products/Debug-iphoneos"></a><code>$(CURRENTCONFIG_DEVICE_DIR) ＝ $()/Build/Products/Debug-iphoneos</code></h3><h3 id="CURRENTCONFIG-SIMULATOR-DIR-Build-Products-Debug-iphonesimulator"><a href="#CURRENTCONFIG-SIMULATOR-DIR-Build-Products-Debug-iphonesimulator" class="headerlink" title="$(CURRENTCONFIG_SIMULATOR_DIR) = $()/Build/Products/Debug-iphonesimulator"></a><code>$(CURRENTCONFIG_SIMULATOR_DIR) = $()/Build/Products/Debug-iphonesimulator</code></h3><h3 id="CREATING-UNIVERSAL-DIR-Build-Products-Debug-universal"><a href="#CREATING-UNIVERSAL-DIR-Build-Products-Debug-universal" class="headerlink" title="$(CREATING_UNIVERSAL_DIR) = $()/Build/Products/Debug-universal"></a><code>$(CREATING_UNIVERSAL_DIR) = $()/Build/Products/Debug-universal</code></h3>
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/Xcode/">#Xcode</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    Powered  By <a href="https://hexo.io/"> Hexo</a> &nbsp; & &nbsp; <a href="http://www.codeblocq.com/assets/projects/hexo-theme-alpha-dust/">JonaThan Klughertz - Alpha-dust</a> <br /> Hosted by <a href="https://pages.github.com/">Github Pages</a>
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/12/07/2019/RoadtoDoctor20191207/">考研之路20191207</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/25/2019/RoadtoDoctor20191125/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/21/2019/RoadtoDoctor20191121/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/03/12/2019/RoadtoDoctor20190312/">考研之路20190312</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/2018/">2018</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/React-Native/">React Native</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/node/">node</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/2019/">2019</a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/203monitor">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:cto@yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="http://yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @<a href="http://yucapri.net/">Yucapri</a>. All right reserved
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

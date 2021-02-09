@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Cocoapods安装与使用本文将介绍CocoaPods从安装到使用过程。CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。 下面将分为两部分来### 讲述如何安装和使用CocoaPods。一、安装CocoaPods先">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Yucapri">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Cocoapods安装与使用"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Yucapri"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Cocoapods安装与使用 - Yucapri</title>
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives/index.html">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/index.html">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories/index.html">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    About Me
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">Yucapri</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/01/25/iOS/iOS_Cocoapods安装与使用/">
+                Cocoapods安装与使用
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016-01-25</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/iOS/">iOS</a>
+                </span>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="Cocoapods安装与使用"><a href="#Cocoapods安装与使用" class="headerlink" title="Cocoapods安装与使用"></a>Cocoapods安装与使用</h1><h3 id="本文将介绍CocoaPods从安装到使用过程。"><a href="#本文将介绍CocoaPods从安装到使用过程。" class="headerlink" title="本文将介绍CocoaPods从安装到使用过程。"></a>本文将介绍CocoaPods从安装到使用过程。</h3><h3 id="CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。-下面将分为两部分来-讲述如何安装和使用CocoaPods。"><a href="#CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。-下面将分为两部分来-讲述如何安装和使用CocoaPods。" class="headerlink" title="CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。 下面将分为两部分来### 讲述如何安装和使用CocoaPods。"></a>CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。 下面将分为两部分来### 讲述如何安装和使用CocoaPods。</h3><h3 id="一、安装CocoaPods"><a href="#一、安装CocoaPods" class="headerlink" title="一、安装CocoaPods"></a>一、安装CocoaPods</h3><h4 id="先使用下面命令升级Ruby版本："><a href="#先使用下面命令升级Ruby版本：" class="headerlink" title="先使用下面命令升级Ruby版本："></a>先使用下面命令升级Ruby版本：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem update --system</span><br><span class="line">sudo gem update -n /usr/local/bin --system(更新到新 Mac系统后pod的安装路径变为这个)</span><br></pre></td></tr></table></figure>
+<h4 id="国内ruby源更新为-http-gems-ruby-china-org"><a href="#国内ruby源更新为-http-gems-ruby-china-org" class="headerlink" title="国内ruby源更新为 http://gems.ruby-china.org"></a>国内ruby源更新为 <code>http://gems.ruby-china.org</code></h4><h4 id="更新命令"><a href="#更新命令" class="headerlink" title="更新命令"></a>更新命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem source --remove https://gems.ruby-china.org</span><br><span class="line">gem source -a http://gems.ruby-china.org</span><br></pre></td></tr></table></figure>
+<h4 id="等待更新完成后，然后通过gem命令来下载安装CocoaPods："><a href="#等待更新完成后，然后通过gem命令来下载安装CocoaPods：" class="headerlink" title="等待更新完成后，然后通过gem命令来下载安装CocoaPods："></a>等待更新完成后，然后通过gem命令来下载安装CocoaPods：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gem install cocoapods</span><br><span class="line">sudo gem install -n /usr/local/bin cocoapods(更新到新 Mac系统后pod的安装路径变为这个)</span><br><span class="line">sudo gem install -n /usr/local/bin cocoapods --pre(安装最新测试版)</span><br></pre></td></tr></table></figure>
+<h4 id="安装完毕后调用下面命令，进行CocoaPods设置："><a href="#安装完毕后调用下面命令，进行CocoaPods设置：" class="headerlink" title="安装完毕后调用下面命令，进行CocoaPods设置："></a>安装完毕后调用下面命令，进行CocoaPods设置：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod setup</span><br></pre></td></tr></table></figure>
+<h4 id="执行完成上述命令后，表示安装成功！下面将讲述如何使用CocoaPods。"><a href="#执行完成上述命令后，表示安装成功！下面将讲述如何使用CocoaPods。" class="headerlink" title="执行完成上述命令后，表示安装成功！下面将讲述如何使用CocoaPods。"></a>执行完成上述命令后，表示安装成功！下面将讲述如何使用CocoaPods。</h4><h3 id="二、使用CocoaPods"><a href="#二、使用CocoaPods" class="headerlink" title="二、使用CocoaPods"></a>二、使用CocoaPods</h3><h4 id="打开终端，使用cd命令定位到需要使用CocoaPods的项目根路径。如："><a href="#打开终端，使用cd命令定位到需要使用CocoaPods的项目根路径。如：" class="headerlink" title="打开终端，使用cd命令定位到需要使用CocoaPods的项目根路径。如："></a>打开终端，使用cd命令定位到需要使用CocoaPods的项目根路径。如：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /Users/username/Documents/Projects/Demo</span><br></pre></td></tr></table></figure>
+<h4 id="先考虑项目中需要引用哪些库，然后在通过search命令来查找库的信息，如需要加入JSONKit，那可以如下写法："><a href="#先考虑项目中需要引用哪些库，然后在通过search命令来查找库的信息，如需要加入JSONKit，那可以如下写法：" class="headerlink" title="先考虑项目中需要引用哪些库，然后在通过search命令来查找库的信息，如需要加入JSONKit，那可以如下写法："></a>先考虑项目中需要引用哪些库，然后在通过search命令来查找库的信息，如需要加入JSONKit，那可以如下写法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod search JSONKit</span><br></pre></td></tr></table></figure>
+<h4 id="命令执行后会得到如下结果："><a href="#命令执行后会得到如下结果：" class="headerlink" title="命令执行后会得到如下结果："></a>命令执行后会得到如下结果：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-&gt; JSONKit (1.5pre)</span><br><span class="line">A Very High Performance Objective-C JSON Library.</span><br><span class="line">pod &apos;JSONKit&apos;, &apos;~&gt; 1.5pre&apos;</span><br><span class="line">- Homepage: https://github.com/johnezang/JSONKit</span><br><span class="line">- Source:   https://github.com/johnezang/JSONKit.git</span><br><span class="line">- Versions: 1.5pre, 1.4 [master repo]</span><br></pre></td></tr></table></figure>
+<h4 id="其中的pod-‘JSONKit’-‘-gt-1-5pre’是待会要写入到Podfile中的信息。如果已经知道这些信息，那可以直接省略此步。直接进行下面的步骤。"><a href="#其中的pod-‘JSONKit’-‘-gt-1-5pre’是待会要写入到Podfile中的信息。如果已经知道这些信息，那可以直接省略此步。直接进行下面的步骤。" class="headerlink" title="其中的pod ‘JSONKit’, ‘~&gt; 1.5pre’是待会要写入到Podfile中的信息。如果已经知道这些信息，那可以直接省略此步。直接进行下面的步骤。"></a>其中的<code>pod ‘JSONKit’, ‘~&gt; 1.5pre’</code>是待会要写入到Podfile中的信息。如果已经知道这些信息，那可以直接省略此步。直接进行下面的步骤。</h4><h4 id="得到必要的库信息后，现在需要在项目中建立Podfile文件。通过下面的命令："><a href="#得到必要的库信息后，现在需要在项目中建立Podfile文件。通过下面的命令：" class="headerlink" title="得到必要的库信息后，现在需要在项目中建立Podfile文件。通过下面的命令："></a>得到必要的库信息后，现在需要在项目中建立Podfile文件。通过下面的命令：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch Podfile</span><br></pre></td></tr></table></figure>
+<h4 id="然后编辑Podfile文件，命令如下："><a href="#然后编辑Podfile文件，命令如下：" class="headerlink" title="然后编辑Podfile文件，命令如下："></a>然后编辑Podfile文件，命令如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -e Podfile</span><br></pre></td></tr></table></figure>
+<h4 id="在弹出的编辑界面中输入下面内容："><a href="#在弹出的编辑界面中输入下面内容：" class="headerlink" title="在弹出的编辑界面中输入下面内容："></a>在弹出的编辑界面中输入下面内容：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">platform :ios</span><br><span class="line">pod &apos;JSONKit&apos;, &apos;~&gt; 1.5pre&apos;</span><br></pre></td></tr></table></figure>
+<h4 id="然后调用下面命令来进行初始化："><a href="#然后调用下面命令来进行初始化：" class="headerlink" title="然后调用下面命令来进行初始化："></a>然后调用下面命令来进行初始化：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
+<h4 id="运行完毕后，原本的项目目录会多出一些文件。如图："><a href="#运行完毕后，原本的项目目录会多出一些文件。如图：" class="headerlink" title="运行完毕后，原本的项目目录会多出一些文件。如图："></a>运行完毕后，原本的项目目录会多出一些文件。如图：</h4><p><img src="http://7xqedu.com1.z0.glb.clouddn.com/YmxvZ18%3DMTYwMTI1MDE%3D.png_s" alt=""></p>
+<h4 id="多了-xcworkspace-pod等文件。这是pod生成的项目管理文件，打开LibDemo-xcworkspace-项目文件，在Xcode里看到是这样的目录结构："><a href="#多了-xcworkspace-pod等文件。这是pod生成的项目管理文件，打开LibDemo-xcworkspace-项目文件，在Xcode里看到是这样的目录结构：" class="headerlink" title="多了*.xcworkspace pod等文件。这是pod生成的项目管理文件，打开LibDemo.xcworkspace 项目文件，在Xcode里看到是这样的目录结构："></a>多了*.xcworkspace pod等文件。这是pod生成的项目管理文件，打开LibDemo.xcworkspace 项目文件，在Xcode里看到是这样的目录结构：</h4><p><img src="http://7xqedu.com1.z0.glb.clouddn.com/YmxvZ18%3DMTYwMTI1MDI%3D.png_s" alt=""></p>
+<h4 id="这里要注意的一点是，如果不调用创建Podfile命令就直接调用pod-install命令。将会提示"><a href="#这里要注意的一点是，如果不调用创建Podfile命令就直接调用pod-install命令。将会提示" class="headerlink" title="这里要注意的一点是，如果不调用创建Podfile命令就直接调用pod install命令。将会提示"></a>这里要注意的一点是，如果不调用创建Podfile命令就直接调用<code>pod install</code>命令。将会提示</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[!] No &apos;Podfile&apos; found in the current working directory.</span><br></pre></td></tr></table></figure>
+<h4 id="如果Podfile中添加了新库，可以使用下面命令进行更新："><a href="#如果Podfile中添加了新库，可以使用下面命令进行更新：" class="headerlink" title="如果Podfile中添加了新库，可以使用下面命令进行更新："></a>如果Podfile中添加了新库，可以使用下面命令进行更新：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod update</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>现在，你的所有第三方库都已经下载完成并且设置好了编译参数和依赖，你只需要记住如下2点即可：</p>
+</blockquote>
+<blockquote>
+<p>1 使用CocoaPods生成的 .xcworkspace 文件来打开工程，而不是以前的 .xcodeproj 文件。<br>2 每次更改了Podfile文件，你需要重新执行一次<code>pod install</code>或者<code>pod update</code>命令 。</p>
+</blockquote>
+<h4 id="cocoapods至此配置完毕，但是你会发现你并不能在项目中找到你导入的库，你需要在Build-Settings-gt-Search-Header的最后一项中添加-PODS-ROOT-后面选择recursive就可以了。"><a href="#cocoapods至此配置完毕，但是你会发现你并不能在项目中找到你导入的库，你需要在Build-Settings-gt-Search-Header的最后一项中添加-PODS-ROOT-后面选择recursive就可以了。" class="headerlink" title="cocoapods至此配置完毕，但是你会发现你并不能在项目中找到你导入的库，你需要在Build Settings-&gt;Search Header的最后一项中添加$(PODS_ROOT),后面选择recursive就可以了。"></a>cocoapods至此配置完毕，但是你会发现你并不能在项目中找到你导入的库，你需要在<code>Build Settings-&gt;Search Header</code>的最后一项中添加<code>$(PODS_ROOT)</code>,后面选择<code>recursive</code>就可以了。</h4><p><img src="http://7xqedu.com1.z0.glb.clouddn.com/YmxvZ18%3DMTYwMTI1MDM%3D.png_s" alt=""></p>
+<h4 id="如果pod-setup太慢，可以直接"><a href="#如果pod-setup太慢，可以直接" class="headerlink" title="如果pod setup太慢，可以直接"></a>如果<code>pod setup</code>太慢，可以直接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/CocoaPods/Specs.git</span><br></pre></td></tr></table></figure>
+<h4 id="clone成功之后将文件夹外层改名为master，移动至～-cocoapods-repos"><a href="#clone成功之后将文件夹外层改名为master，移动至～-cocoapods-repos" class="headerlink" title="clone成功之后将文件夹外层改名为master，移动至～/.cocoapods/repos/"></a>clone成功之后将文件夹外层改名为master，移动至～/.cocoapods/repos/</h4><h4 id="如果pod-search失败，可执行"><a href="#如果pod-search失败，可执行" class="headerlink" title="如果pod search失败，可执行"></a>如果<code>pod search</code>失败，可执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm ~/Library/Caches/CocoaPods/search_index.json</span><br></pre></td></tr></table></figure>
+<h4 id="然后再尝试pod-search"><a href="#然后再尝试pod-search" class="headerlink" title="然后再尝试pod search"></a>然后再尝试<code>pod search</code></h4>
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/Cocoapods/">#Cocoapods</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    Powered  By <a href="https://hexo.io/"> Hexo</a> &nbsp; & &nbsp; <a href="http://www.codeblocq.com/assets/projects/hexo-theme-alpha-dust/">JonaThan Klughertz - Alpha-dust</a> <br /> Hosted by <a href="https://pages.github.com/">Github Pages</a>
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/12/07/2019/RoadtoDoctor20191207/">考研之路20191207</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/25/2019/RoadtoDoctor20191125/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/21/2019/RoadtoDoctor20191121/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/03/12/2019/RoadtoDoctor20190312/">考研之路20190312</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/2018/">2018</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/React-Native/">React Native</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/node/">node</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/2019/">2019</a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/203monitor">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:cto@yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="http://yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @<a href="http://yucapri.net/">Yucapri</a>. All right reserved
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

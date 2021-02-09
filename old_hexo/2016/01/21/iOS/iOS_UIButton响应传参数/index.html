@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="UIButton响应传参数开发过程中，有些初学者经常会问，如何调用UIButton的响应时传入一个参数，但是，1- (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvent">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Yucapri">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="UIButton响应传参数"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Yucapri"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>UIButton响应传参数 - Yucapri</title>
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives/index.html">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags/index.html">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories/index.html">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    About Me
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="http://yucapri.net/">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">Yucapri</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/01/21/iOS/iOS_UIButton响应传参数/">
+                UIButton响应传参数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016-01-21</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/iOS/">iOS</a>
+                </span>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="UIButton响应传参数"><a href="#UIButton响应传参数" class="headerlink" title="UIButton响应传参数"></a>UIButton响应传参数</h1><h3 id="开发过程中，有些初学者经常会问，如何调用UIButton的响应时传入一个参数，但是，"><a href="#开发过程中，有些初学者经常会问，如何调用UIButton的响应时传入一个参数，但是，" class="headerlink" title="开发过程中，有些初学者经常会问，如何调用UIButton的响应时传入一个参数，但是，"></a>开发过程中，有些初学者经常会问，如何调用UIButton的响应时传入一个参数，但是，</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;</span><br></pre></td></tr></table></figure>
+<h3 id="方法是无法传参数的，能得到的只是响应的UIButton。下面我们来学习一下如何通过UIButton来“传参数”。-我们以UITableView-为例，在UITableViewCell中定义一个cell，我们称之为CustomCell，cell上加有一个UIButton的控件。我们要做的是-如何在点击UIButton时获得cell。可以通过以下两种方法实现。"><a href="#方法是无法传参数的，能得到的只是响应的UIButton。下面我们来学习一下如何通过UIButton来“传参数”。-我们以UITableView-为例，在UITableViewCell中定义一个cell，我们称之为CustomCell，cell上加有一个UIButton的控件。我们要做的是-如何在点击UIButton时获得cell。可以通过以下两种方法实现。" class="headerlink" title="方法是无法传参数的，能得到的只是响应的UIButton。下面我们来学习一下如何通过UIButton来“传参数”。 我们以UITableView 为例，在UITableViewCell中定义一个cell，我们称之为CustomCell，cell上加有一个UIButton的控件。我们要做的是 如何在点击UIButton时获得cell。可以通过以下两种方法实现。"></a>方法是无法传参数的，能得到的只是响应的UIButton。下面我们来学习一下如何通过UIButton来“传参数”。 我们以UITableView 为例，在UITableViewCell中定义一个cell，我们称之为CustomCell，cell上加有一个UIButton的控件。我们要做的是 如何在点击UIButton时获得cell。可以通过以下两种方法实现。</h3><h3 id="使用delegate-首先，在CustomCell类文件中定义protocol，有如下定义"><a href="#使用delegate-首先，在CustomCell类文件中定义protocol，有如下定义" class="headerlink" title="使用delegate 首先，在CustomCell类文件中定义protocol，有如下定义"></a>使用delegate 首先，在CustomCell类文件中定义protocol，有如下定义</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@protocol CustomCellProtocol</span><br><span class="line">- (void)customCell:(CustomCell *)cell didTapButton:(UIButton *)button;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<h3 id="将UIButton的响应加在CustomCell文件中，比如这个响应叫做"><a href="#将UIButton的响应加在CustomCell文件中，比如这个响应叫做" class="headerlink" title="将UIButton的响应加在CustomCell文件中，比如这个响应叫做"></a>将UIButton的响应加在CustomCell文件中，比如这个响应叫做</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (IBAction)buttonTarget:(id)sender;</span><br></pre></td></tr></table></figure>
+<h3 id="那么在点击button时，就会调用这个方法。这个方法可以实现如下，"><a href="#那么在点击button时，就会调用这个方法。这个方法可以实现如下，" class="headerlink" title="那么在点击button时，就会调用这个方法。这个方法可以实现如下，"></a>那么在点击button时，就会调用这个方法。这个方法可以实现如下，</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (IBAction)buttonTarget:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(customCell:didTapButton:)]) &#123;</span><br><span class="line">        [self.delegate performSelector:@selector(customCell:didTapButton:) withObject:self   withObject:self.button];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="然后在UIViewController里实现代理方法，这样，就能获得这个UIButton所在的UITableViewCell。"><a href="#然后在UIViewController里实现代理方法，这样，就能获得这个UIButton所在的UITableViewCell。" class="headerlink" title="然后在UIViewController里实现代理方法，这样，就能获得这个UIButton所在的UITableViewCell。"></a>然后在UIViewController里实现代理方法，这样，就能获得这个UIButton所在的UITableViewCell。</h3><h3 id="在ViewController中添加响应-第二种方法时在"><a href="#在ViewController中添加响应-第二种方法时在" class="headerlink" title="在ViewController中添加响应 第二种方法时在"></a>在ViewController中添加响应 第二种方法时在</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;</span><br></pre></td></tr></table></figure>
+<h3 id="方法中直接给UIButton添加响应。实现如下，"><a href="#方法中直接给UIButton添加响应。实现如下，" class="headerlink" title="方法中直接给UIButton添加响应。实现如下，"></a>方法中直接给UIButton添加响应。实现如下，</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-(UITableViewCell *)tableView:(UITableView *)atableView cellForRowAtIndexPath:(NSIndexPath *)indexPath &#123;</span><br><span class="line">    CustomCell *cell = [atableView         dequeueReusableCellWithIdentifier:@&quot;CustomCell&quot;];</span><br><span class="line">    [cell.button addTarget:self action:@selector(didTapButton:)   forControlEvents:UIControlEventTouchUpInside];</span><br><span class="line">    return cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="那么点击button时就会调用"><a href="#那么点击button时就会调用" class="headerlink" title="那么点击button时就会调用"></a>那么点击button时就会调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (void)didTapButton:(UIButton *)sender</span><br></pre></td></tr></table></figure>
+<h3 id="剩下的就是如何通过这个sender获得它所在的cell。我们这么实现这个方法，"><a href="#剩下的就是如何通过这个sender获得它所在的cell。我们这么实现这个方法，" class="headerlink" title="剩下的就是如何通过这个sender获得它所在的cell。我们这么实现这个方法，"></a>剩下的就是如何通过这个sender获得它所在的cell。我们这么实现这个方法，</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (void)didTapButton:(UIButton *)sender &#123;</span><br><span class="line">    CGRect buttonRect = sender.frame;</span><br><span class="line">    for (CustomCell *cell in [tableView visibleCells]) &#123;</span><br><span class="line">        if (CGRectIntersectsRect(buttonRect, cell.frame)) &#123;</span><br><span class="line">            //cell就是所要获得的</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="http://innovatence.com/?p=196" target="_blank" rel="noopener">原文链接</a></p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/UIButton/">#UIButton</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    Powered  By <a href="https://hexo.io/"> Hexo</a> &nbsp; & &nbsp; <a href="http://www.codeblocq.com/assets/projects/hexo-theme-alpha-dust/">JonaThan Klughertz - Alpha-dust</a> <br /> Hosted by <a href="https://pages.github.com/">Github Pages</a>
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/12/07/2019/RoadtoDoctor20191207/">考研之路20191207</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/25/2019/RoadtoDoctor20191125/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/11/21/2019/RoadtoDoctor20191121/">考研之路20191121</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2019/03/12/2019/RoadtoDoctor20190312/">考研之路20190312</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/2018/">2018</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/React-Native/">React Native</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/node/">node</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/2019/">2019</a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/203monitor">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:cto@yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="http://yucapri.net">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @<a href="http://yucapri.net/">Yucapri</a>. All right reserved
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
